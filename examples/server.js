@@ -28,6 +28,7 @@ const router = express.Router()
 handleBasicRouter()
 handleInstanceRouter()
 handleInterceptorsRouter()
+handleCancellationRouter()
 
 app.use(router)
 
@@ -55,6 +56,19 @@ function handleInstanceRouter () {
 function handleInterceptorsRouter () {
   router.get('/interceptors/get', function (req, res) {
     res.json(req.query)
+  })
+}
+
+function handleCancellationRouter () {
+  router.get('/cancel/get', function (req, res) {
+    setTimeout(() => {
+      res.json('cancellation')
+    }, 3000)
+  })
+  router.post('/cancel/post', function (req, res) {
+    setTimeout(() => {
+      res.json(req.body)
+    }, 3000)
   })
 }
 
