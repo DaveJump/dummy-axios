@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="/common.css">
+</head>
+<body>
+  <h2>library examples</h2>
+  <ul>
+    <li data-example="basic">Basic</li>
+    <li data-example="instance">Instance</li>
+    <li data-example="interceptors">Interceptors</li>
+  </ul>
+
+  <script>
+    var list = document.querySelectorAll('li[data-example]')
+    list.forEach(li => {
+      li.addEventListener('click', function () {
+        window.location.href = window.origin + '/__build__/' + li.getAttribute('data-example') + '.html'
+      }, false)
+    })
+  </script>
+</body>
+</html>
