@@ -13,6 +13,11 @@ const defaults: AxiosRequestConfig = {
     }
   },
 
+  withCredentials: true,
+
+  csrfCookieName: 'csrf-TOKEN',
+  csrfHeaderName: 'csrf-TOKEN-HEADER',
+
   transformRequest: [
     function (data: any, headers: any): any {
       processHeaders(headers, data)
@@ -23,7 +28,11 @@ const defaults: AxiosRequestConfig = {
     function (data: any): any {
       return transformResponse(data)
     }
-  ]
+  ],
+
+  validateStatus(status: number): boolean {
+    return status >= 200 && status < 400
+  }
 }
 
 const methodsWithNoData = ['get', 'delete', 'head', 'options']

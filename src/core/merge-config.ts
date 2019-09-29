@@ -31,7 +31,7 @@ stratKeysFromDefaults.forEach(key => {
   strats[key] = userStrat
 })
 
-const stratKeysFromMerged = ['headers']
+const stratKeysFromMerged = ['headers', 'auth']
 
 stratKeysFromMerged.forEach(key => {
   strats[key] = deepMergeStrat
