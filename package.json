@@ -1,15 +1,15 @@
 {
-  "name": "req-lib-ts",
-  "version": "0.0.0",
+  "name": "@djp6/req-lib",
+  "version": "1.0.0",
   "description": "",
   "keywords": [],
-  "main": "dist/req-lib-ts.umd.js",
-  "module": "dist/req-lib-ts.es5.js",
-  "typings": "dist/types/req-lib-ts.d.ts",
+  "main": "dist/req-lib.umd.js",
+  "module": "dist/req-lib.es5.js",
+  "typings": "dist/types/req-lib.d.ts",
   "files": [
     "dist"
   ],
-  "author": "DaveJump <983136557@qq.com>",
+  "author": "DaveJump <davejump16@gmail.com>",
   "repository": {
     "type": "git",
     "url": ""
@@ -33,7 +33,9 @@
     "semantic-release": "semantic-release",
     "semantic-release-prepare": "ts-node tools/semantic-release-prepare",
     "precommit": "lint-staged",
-    "travis-deploy-once": "travis-deploy-once"
+    "travis-deploy-once": "travis-deploy-once",
+    "prerelease": "npm run lint && npm run build",
+    "release": "sh release.sh"
   },
   "lint-staged": {
     "{src,test}/**/*.ts": [
