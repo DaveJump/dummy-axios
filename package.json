@@ -1,11 +1,11 @@
 {
-  "name": "@djp6/req-lib",
+  "name": "@djp6/dummy-axios",
   "version": "1.0.1",
   "description": "",
   "keywords": [],
-  "main": "dist/req-lib.umd.js",
-  "module": "dist/req-lib.es5.js",
-  "typings": "dist/types/req-lib.d.ts",
+  "main": "dist/dummy-axios.umd.js",
+  "module": "dist/dummy-axios.es5.js",
+  "typings": "dist/types/dummy-axios.d.ts",
   "files": [
     "dist"
   ],

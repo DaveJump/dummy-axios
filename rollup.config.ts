@@ -7,7 +7,7 @@ import json from 'rollup-plugin-json'
 
 const pkg = require('./package.json')
 
-const libraryName = 'req-lib'
+const libraryName = 'dummy-axios'
 
 export default {
   input: `src/index.ts`,
